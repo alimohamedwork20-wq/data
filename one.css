@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: rgb(230, 243, 254);
+    min-height: 100vh;
+}
+
+/* container */
+.contener{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    min-height: 100vh;
+}
+
+/* main card */
+.content{
+    background-color: white;
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 50px -30px black;
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+}
+
+/* left side */
+.content-left{
+    flex: 1;
+    position: relative;
+}
+
+.content-left img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* steps */
+.details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: white;
+}
+
+.details .one,
+.details .two,
+.details .three,
+.details .four{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.details button{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.details button:hover{
+    background-color: rgb(130, 230, 169);
+    color: black;
+}
+#one{
+    background-color: rgb(130, 230, 169);
+    color: black;
+}
+.details h3{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.details p{
+    font-size: 12px;
+    color: rgb(220, 220, 220);
+}
+
+/* right side */
+.content-right{
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-right h1{
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.content-right p{
+    color: rgb(140, 140, 140);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* form */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label{
+    font-size: 14px;
+}
+
+input{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 7px;
+    border: 1px solid rgb(175, 175, 175);
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus{
+    border-color: rgb(105, 37, 214);
+}
+
+/* button */
+form button{
+    align-self: flex-end;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(23, 98, 173);
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* error */
+#error{
+    color: red;
+    font-size: 14px;
+    opacity: 0;
+    cursor: default;
+    transform: translateY(-400%);
+}
+@media (max-width:700px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        
+    }
+    img{
+        content: url("bg-sidebar-mobile.svg");
+        position: relative;
+        
+    }
+    .details{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 0;
+        text-align: center;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        height: 100%;
+    }
+    .details .text{
+        display: none;
+    }
+    .content-left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #error{
+        position: relative;
+        bottom: 13%;
+    }
+}
